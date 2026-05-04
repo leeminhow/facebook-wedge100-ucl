@@ -110,15 +110,15 @@ It is **not intended to be a generic NOS**.
 
 Recommended:
 
-* Accton diagnostic image
+* Accton diagnostic image (in edgecore support portal)
 
 Supported with manual setup:
 
-* Open Network Installer Environment (ONIE)
+* Open Network Installer Environment (ONIE) (in edgecore support portal)
 
 ---
 
-### Required Components
+### Required Components (All included by default in Accton Diag)
 
 Broadcom runtime:
 
