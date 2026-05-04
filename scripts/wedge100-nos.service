@@ -1,0 +1,29 @@
+[Unit]
+Description=Wedge 100 NOS - Network Operating System for Accton Wedge 100
+Documentation=https://github.com/yourname/wedge100-nos
+After=network.target
+Wants=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/python3 /usr/local/wedge100-nos/scripts/startup.py
+ExecStop=/usr/bin/python3 /usr/local/wedge100-nos/scripts/shutdown.py
+
+# 환경 변수
+Environment=PYTHONPATH=/usr/local/wedge100-nos
+Environment=WEDGE100_NOS_ENV=production
+
+# 실패 시 재시도 없음 (ASIC 재초기화는 수동으로)
+Restart=no
+
+# 로그
+StandardOutput=journal+console
+StandardError=journal+console
+SyslogIdentifier=wedge100-nos
+
+# 루트 권한 필요 (커널 모듈 로드, i2c 접근)
+User=root
+
+[Install]
+WantedBy=multi-user.target

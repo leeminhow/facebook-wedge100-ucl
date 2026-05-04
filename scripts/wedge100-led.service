@@ -1,0 +1,18 @@
+[Unit]
+Description=Wedge 100 LED Auto-Control Daemon
+After=wedge100-nos.service
+Requires=wedge100-nos.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/wedge100-nos/wedge100/daemons/led_daemon.py
+Restart=on-failure
+RestartSec=10
+Environment=PYTHONPATH=/usr/local/wedge100-nos
+User=root
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=wedge100-led
+
+[Install]
+WantedBy=multi-user.target
