@@ -95,9 +95,8 @@ BCM56960 ASIC
 
 Currently targeted hardware:
 
-* **Accton AS5712-54X**
-* **Facebook Wedge100**
-* Broadcom **BCM56960 Tomahawk**
+* **Facebook Wedge100-32X**
+* **Accton Wedge100-32X**
 
 This project is tightly optimized for this platform.
 
@@ -115,7 +114,7 @@ Recommended:
 
 Supported with manual setup:
 
-* Open Network Linux (ONL)
+* Open Network Installer Environment (ONIE)
 
 ---
 
